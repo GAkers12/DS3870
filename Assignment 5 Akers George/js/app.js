@@ -24,7 +24,7 @@ function buildEmployeeCard(){
             strHTML += '<div class="form-group">';
             strHTML += '<label class ="mr-2">Total Pay</label>';
             strHTML += '<input class="txtTotalPay" disabled>';
-            strHTML += '<button class="btn btn-primary btn-block btnCalculatePay">Calculate Pay</button>';
+            strHTML += '<button class="btn btn-primary btn-block btnCalculatePay">Calculate Pay</button>'
             strHTML += '</div>';
             strHTML += '</div>';
             $('#divEmployeeCards').append(strHTML);
