@@ -24,8 +24,17 @@ function buildEmployeeCard(){
             strHTML += '<div class="form-group">';
             strHTML += '<label class ="mr-2">Total Pay</label>';
             strHTML += '<input class="txtTotalPay" disabled>';
-            strHTML += '<button class="btn btn-primary btn-block btnCalculatePay">'
+            strHTML += '<button class="btn btn-primary btn-block btnCalculatePay">Calculate Pay</button>';
+            strHTML += '</div>';
+            strHTML += '</div>';
+            $('#divEmployeeCards').append(strHTML);
         }
-    })
+
+    });
 }
 
+$(document).on('click','.btnCalculatePay',function() {
+    let decHours = $(this).closest('.card').find('.txtHours').val();
+    let decRate = $(this).closest('.card').find('.txtHourlyRate').val().slit(': ')[1];
+    $(this).closest('.card').find('.txtTotalPay').val(decHours * decRate);
+})
