@@ -17,8 +17,8 @@ function buildEmployeeCard(){
             strHTML += '<div>'
             strHTML += '<h4 class="mt-3">Contact Details<h/4>';
             strHTML += '</div>';
-            strHTML += '<p>PhoneNumber: ' + person.HomePhone + '</p>';
-            strHTML += '<p class=>Email: ' + person.Email + '</p>';
+            strHTML += '<p>PhoneNumber: <a href="tel:' + person.HomePhone + '" class="aPhone">' + person.HomePhone + '</a></p>';
+            strHTML += '<p class=>Email: <a href="mailto:' + person.Email + '" class="aEmail">' + person.Email + '</a></p>';
             strHTML += '<div>';
             strHTML += '<h4>Address<h/4>';
             strHTML += '</div>';
