@@ -11,7 +11,7 @@ function buildEmployeeCard(){
         
             let strHTML = '<div class="card col-3 mt-5 ml-3">';
             strHTML += '<img src="images/profile.png" alt="Profile Image" style="margin:auto; max-width:100%;">';
-            strHTML += '<h3 class="text-center"><a href="mailto:' + person.email + '">' + person.FirstName + ' ' + person.LastName + '</a></h3>';
+            strHTML += '<h3 class="text-center">' + person.FirstName + ' ' + person.LastName + '</a></h3>';
             strHTML += '<h4 class ="text-center">' + person.Position +'<h/4>';
             strHTML += '<h4 class = "mt-3">Profile Details<h/4>';
             strHTML += '<p>Hire Date: ' + person.HireDate + '</p>';
@@ -23,7 +23,7 @@ function buildEmployeeCard(){
             strHTML += '</div>';
             strHTML += '<div class="form-group">';
             strHTML += '<label class ="mr-2">Total Pay</label>';
-            strHTML += '<input class="txtTotalPay" disabled>';
+            strHTML += '<input class="txtTotalPay">';
             strHTML += '<button class="btn btn-primary btn-block btnCalculatePay">Calculate Pay</button>'
             strHTML += '</div>';
             strHTML += '</div>';
@@ -35,6 +35,6 @@ function buildEmployeeCard(){
 
 $(document).on('click','.btnCalculatePay',function() {
     let decHours = $(this).closest('.card').find('.txtHours').val();
-    let decRate = $(this).closest('.card').find('.txtHourlyRate').val().slit(': ')[1];
+    let decRate = $(this).closest('.card').find('.txtHourlyRate').attr('data-rate');
     $(this).closest('.card').find('.txtTotalPay').val(decHours * decRate);
 });

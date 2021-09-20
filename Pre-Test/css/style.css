@@ -1,0 +1,21 @@
+  
+body {
+    background-image: url("https://www.swollenhippo.com/background.jpg");
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    background-size: auto;
+}
+#divNostalgiaEmployeeCards{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#divNostalgiaEmployeeCards .card {
+      display: inline-block;
+    }
+  
+
+img {
+    border-radius: 50%;
+  }
